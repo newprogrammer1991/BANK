@@ -1,0 +1,23 @@
+.mixin-transition-delay(@counter,@time-delay) when (@counter>0) {
+  &:nth-child(@{counter}) {
+    transition-delay: (@counter*@time-delay);
+  }
+  .mixin-transition-delay((@counter - 1), @time-delay);
+}
+
+;
+
+.linkanimation() {
+  &:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: @white;
+    transition: 0.3s ease-out;
+  }
+  &:hover:after {
+    width: 100%;
+    background-color: @gold;
+  }
+}

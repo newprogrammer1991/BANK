@@ -1,0 +1,65 @@
+.order {
+  min-height: 300px;
+  .container {
+    height: 300px;
+    background-image: url("../img/girl.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}
+
+.section__form {
+  width: 59.52%;
+
+}
+.form{
+  position: relative;
+}
+
+.form__box-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__box {
+  width: ~"calc(50% - 5px)";
+  text-align: right;
+}
+
+.form__field {
+  margin-bottom: 10px;
+  input {
+    padding-left: 15px;
+    height: 40px;
+    ::placeholder{
+      font-size: @font-size-desc;
+    }
+  }
+  textarea {
+    padding-left: 15px;
+    height: 140px;
+    ::placeholder{
+      font-size: @font-size-desc;
+    }
+  }
+}
+
+.btn_inline {
+  position: absolute;
+  right: 0;
+}
+
+@media all  and @tablet-width {
+  .order {
+    .container {
+      background: none;
+    }
+  }
+
+  .section__form {
+    width: 100%;
+  }
+  .btn_inline{
+    width: 100%;
+  }
+}
