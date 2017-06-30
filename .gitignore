@@ -1,8 +1,0 @@
-node_modules/
-build/
-app/css
-app/js/dev/
-app/img/symbols.svg
-app/img/sprite.png
-.idea/
-.publish/
