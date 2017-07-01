@@ -97,7 +97,6 @@ gulp.task('sprite', function () {
 gulp.task('fonts', function () {
     return gulp.src('**/*', {cwd: path.join(srcPath + 'fonts')})
         .pipe(gulp.dest(buildPath + '/fonts'))
-
 });
 
 gulp.task("images", function () {
@@ -134,11 +133,10 @@ gulp.task('serve', function () {
     }
 });
 
-
 gulp.task('build', function (fn) {
     console.log(isProduction)
     if (isProduction) {
-        run('clean', 'symbols', 'images', 'fonts', 'less', 'js', 'html', 'serve', fn)
+        run('clean', 'symbols','sprite', 'images', 'fonts', 'less', 'js', 'html', 'serve', fn)
     }
     else {
         run('symbols', 'sprite', 'js', 'images', 'less', 'serve', fn);
